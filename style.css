@@ -114,9 +114,14 @@ te3 {
     left: 20px;
 }
 #link6 {
-    background-color: #646488;
+    background-color: #646464;
     top: -540px;
     left: 80px;
+}
+#link7 {
+    background-color: #646488;
+    top: -588px;
+    left: 140px;
 }
 #help1 {
     position: relative;
