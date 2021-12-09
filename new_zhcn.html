@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=580px">
+    <title>WZQ02 的小站</title>
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="shortcut icon" type="image/png" href="images/icon.png" />
+    <link rel="stylesheet" href="./style.css" id="current_skin">
+</head>
+<body onload="init();">
+	<div class="topbar">
+		<te3>
+			<a href="javascript:void(0)" onclick="changetheme()"><span id="chgskin">高对比度</span></a>&nbsp;&emsp;&nbsp;2021 WZQ02
+		</te3>
+	</div>
+    <div class="board">
+        <a title="私人网盘（容量不到10G" href="http://wzq02.tk:1145/"><div id="section1">
+            <te>文件服务器</te>
+        </div></a>
+        <a title="一些我瞎写的页面，以及不是我写的页面" href="http://wzq02.tk:893/"><div id="section2">
+            <te>一些演示页面</te>
+        </div></a>
+        <a title="私人直播间 (hls 协议串流)" href="/player/livewithchat"><div id="section3">
+            <te>直播间 & 聊天室</te>
+        </div></a>
+        <a><div id="section4">
+            <te>没有更多功能<br>不要期待!11</te>
+        </div></a>
+        <a href="javascript:void(0)" onclick="help1()"><div id="help1"><img src="images/question_mark.png" height="24" width="24"/></div></a>
+        <div id="prompt">
+            <te2>私人直播间<br><br>我可能会在这里直播一些无法在 B 站播出的内容。<br>如果你打算租用本直播间，请私信我。</te2>
+        </div>
+    </div>
+    <div class="outlinks">
+        <a title="个人博客" href="https://wzq02.github.io/"><div id="link1"><img src="images/link/link_hexo.png" height="48" width="48"/></div></a>
+        <a title="B站空间" href="https://space.bilibili.com/12367945/"><div id="link2"><img src="images/link/bili_main.png" height="48" width="48"/></div></a>
+        <a title="youtube频道" href="https://www.youtube.com/channel/UC8mPjdjl363hvt1ou7PDx3g/"><div id="link3"><img src="images/link/ytb_main.png" height="48" width="48"/></div></a>
+        <a title="返回旧版" href="old.html"><div id="link4"><img src="images/link/link_back.png" height="48" width="48"/></div></a>
+        <a title="English" href="new_eng.html"><div id="link5"><img src="images/link/link_eng.png" height="48" width="48"/></div></a>
+        <a title="其他外部链接" href="otherlinks.html"><div id="link6"><img src="images/link/link_others.png" height="48" width="48"/></div></a>
+    </div>
+<script>
+    function init() {
+        var url = window.location.href;
+        autochangetheme();
+        if (url.indexOf("flag") != -1) {
+            changeanimation();
+        }
+    }
+    function clearprompt() {
+        var prompt = document.getElementById("prompt");
+        prompt.style.animation = "";
+        prompt.style.display = "none";
+    }
+    function help1() {
+        var prompt = document.getElementById("prompt");
+        if (prompt.style.display == "block") {
+            prompt.style.animation = "llaf 0.31s ease 1";
+            setTimeout("clearprompt()","300");
+        }
+        else {
+            prompt.style.display = "block";
+        }
+    }
+    function changeanimation() {
+        var board = document.getElementsByClassName("board")[0];
+        var outlinks = document.getElementsByClassName("outlinks")[0];
+        var s1 = document.getElementById("section1");
+        var s2 = document.getElementById("section2");
+        var s3 = document.getElementById("section3");
+        var s4 = document.getElementById("section4");
+        board.style.animation = "boardfall 0.5s cubic-bezier(0, 0.67, 0, 1) 1"
+        outlinks.style.animation = "linksfall 0.5s cubic-bezier(0, 0.67, 0, 1) 1"
+        s1.style.animation = "none"
+        s2.style.animation = "none"
+        s3.style.animation = "none"
+        s4.style.animation = "none"
+    }
+    function changetheme() {
+        var n = getCookie('userskin');
+        var chgskin = document.getElementById("chgskin");
+        var skin = document.getElementById("current_skin");
+        if (n == "1") {
+            setCookie('userskin',"",365)
+            chgskin.innerText = "高对比度";
+            skin.href = "./style.css";
+        }
+        else {
+            setCookie('userskin',1,365);
+            autochangetheme();
+        }
+    }
+    function autochangetheme() {
+        var n = getCookie('userskin');
+    	var chgskin = document.getElementById("chgskin");
+    	var skin = document.getElementById("current_skin");
+    	if (n == "1") {
+    		chgskin.innerText = "默认主题";
+    		skin.href = "./style_hicon.css";
+    	}
+    }
+    function setCookie(cname,cvalue,exdays) {
+        var d = new Date();
+        d.setTime(d.getTime()+(exdays*24*60*60*1000));
+        var expires = "expires="+d.toGMTString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i=0; i<ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        }
+        return "";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>get stick bugged lol</title>
+    <style>
+        body { 
+            background: #877a7a; 
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+                /*transform-origin: left top;*/
+            }
+            to {
+                transform: rotate(180000deg);
+            }
+        }
+        @keyframes spin2 {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes movv {
+            from {
+                top: 50%;
+            }
+            to {
+                top: 0%;
+            }
+        }
+        #stick0 {
+            transform: rotate(-67deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 140px;
+            left: 20px;
+            width: 120px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov0 0.5s ease infinite;
+        }
+        #stick1 {
+            transform: rotate(-16deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 67px;
+            left: 95px;
+            width: 125px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov1 0.5s ease infinite;
+        }
+        #stick2 {
+            transform: rotate(-74deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 130px;
+            left: 110px;
+            width: 170px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov2 0.5s ease infinite;
+        }
+        #stick3 {
+            transform: rotate(27deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 60px;
+            left: 170px;
+            width: 145px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov3 0.5s ease infinite;
+        }
+        #stick4 {
+            transform: rotate(-52deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 105px;
+            left: 185px;
+            width: 100px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov4 0.5s ease infinite;
+        }
+        #stick5 {
+            transform: rotate(94deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 174px;
+            left: 158px;
+            width: 90px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov5 0.5s ease infinite;
+        }
+        #stick6 {
+            transform: rotate(60deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 100px;
+            left: 230px;
+            width: 90px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov6 0.5s ease infinite;
+        }
+        #stick7 {
+            transform: rotate(-72deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 177px;
+            left: 230px;
+            width: 100px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov7 0.5s ease infinite;
+        }
+        #stick8 {
+            transform: rotate(-67deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 110px;
+            left: 220px;
+            width: 75px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov8 0.5s ease infinite;
+        }
+        #stick9 {
+            transform: rotate(80deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 180px;
+            left: 207px;
+            width: 95px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov9 0.5s ease infinite;
+        }
+        #stick10 {
+            transform: rotate(14deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 90px;
+            left: 260px;
+            width: 135px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov10 0.5s ease infinite;
+        }
+        #stick11 {
+            transform: rotate(-9deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 77px;
+            left: 300px;
+            width: 124px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov11 0.5s ease infinite;
+        }
+        #stick12 {
+            transform: rotate(72deg);
+            background-color: #f9ffd9;
+            position: fixed;
+            top: 170px;
+            left: 340px;
+            width: 140px;
+            height: 16px;
+            border-radius: 8px;
+            animation: stkmov12 0.5s ease infinite;
+        }
+        @keyframes stkmov0 {
+            0% {
+                transform: rotate(-67deg);
+            }
+            50% {
+                transform: rotate(-77deg);
+            }
+            100% {
+                transform: rotate(-67deg);
+            }
+        }
+        @keyframes stkmov1 {
+            0% {
+                transform: rotate(-16deg);
+            }
+            50% {
+                transform: rotate(-24deg);
+            }
+            100% {
+                transform: rotate(-16deg);
+            }
+        }
+        @keyframes stkmov2 {
+            0% {
+                transform: rotate(-74deg);
+            }
+            50% {
+                transform: rotate(-86deg);
+            }
+            100% {
+                transform: rotate(-74deg);
+            }
+        }
+        @keyframes stkmov3 {
+            0% {
+                transform: rotate(27deg);
+            }
+            50% {
+                transform: rotate(19deg);
+            }
+            100% {
+                transform: rotate(27deg);
+            }
+        }
+        @keyframes stkmov4 {
+            0% {
+                transform: rotate(-52deg);
+            }
+            50% {
+                transform: rotate(-62deg);
+            }
+            100% {
+                transform: rotate(-52deg);
+            }
+        }
+        @keyframes stkmov5 {
+            0% {
+                transform: rotate(94deg);
+            }
+            50% {
+                transform: rotate(104deg);
+            }
+            100% {
+                transform: rotate(94deg);
+            }
+        }
+        @keyframes stkmov6 {
+            0% {
+                transform: rotate(60deg);
+            }
+            50% {
+                transform: rotate(50deg);
+            }
+            100% {
+                transform: rotate(60deg);
+            }
+        }
+        @keyframes stkmov7 {
+            0% {
+                transform: rotate(-72deg);
+            }
+            50% {
+                transform: rotate(-62deg);
+            }
+            100% {
+                transform: rotate(-72deg);
+            }
+        }
+        @keyframes stkmov8 {
+            0% {
+                transform: rotate(-67deg);
+            }
+            50% {
+                transform: rotate(-77deg);
+            }
+            100% {
+                transform: rotate(-67deg);
+            }
+        }
+        @keyframes stkmov9 {
+            0% {
+                transform: rotate(80deg);
+            }
+            50% {
+                transform: rotate(90deg);
+            }
+            100% {
+                transform: rotate(80deg);
+            }
+        }
+        @keyframes stkmov10 {
+            0% {
+                transform: rotate(14deg);
+            }
+            50% {
+                transform: rotate(24deg);
+            }
+            100% {
+                transform: rotate(14deg);
+            }
+        }
+        @keyframes stkmov11 {
+            0% {
+                transform: rotate(-9deg);
+            }
+            50% {
+                transform: rotate(-20deg);
+            }
+            100% {
+                transform: rotate(-9deg);
+            }
+        }
+        @keyframes stkmov12 {
+            0% {
+                transform: rotate(72deg);
+            }
+            50% {
+                transform: rotate(82deg);
+            }
+            100% {
+                transform: rotate(72deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pic1">
+        <div id="stickbug">
+            <div id="stick0"></div>
+            <div id="stick1"></div>
+            <div id="stick2"></div>
+            <div id="stick3"></div>
+            <div id="stick4"></div>
+            <div id="stick5"></div>
+            <div id="stick6"></div>
+            <div id="stick7"></div>
+            <div id="stick8"></div>
+            <div id="stick9"></div>
+            <div id="stick10"></div>
+            <div id="stick11"></div>
+            <div id="stick12"></div>
+        </div>
+        <audio autoplay="autoplay" loop="loop" >
+            <source src="http://wzq02.tk:893/stickbug.m4a" />
+        </audio>
+    </div>
+</body>
+</html>

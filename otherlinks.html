@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=512px">
+    <title>其他外部链接</title>
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="shortcut icon" type="image/png" href="images/icon.png" />
+    <link rel="stylesheet" href="./style_linklist.css">
+</head>
+<body onload="englist();">
+    <div class="list">
+        <a title="#1" href="https://www.acfun.cn/u/4352250"><div id="l1">
+            <te><span id="l1t">Acfun</span></te>
+        </div></a>
+        <a title="#2" href="https://space.bilibili.com/568299236/"><div id="l2">
+            <te><span id="l2t">B 站子频道</span></te>
+        </div></a>
+        <a title="#3" href="https://twitter.com/02Wzq/"><div id="l3">
+            <te><span id="l3t">Twitter</span></te>
+        </div></a>
+        <a title="#4" href="https://discord.gg/Bpv4qaw"><div id="l4">
+            <te><span id="l4t">加入 WZQ02 的 Discord 群</span></te>
+        </div></a>
+        <a title="#5" href="https://www.twitch.tv/wzq02/"><div id="l5">
+            <te><span id="l5t">Twitch</span></te>
+        </div></a>
+        <!--<a title="#6" href="https://www.youku.com/profile/index/?spm=114514&uid=UNTEzMjIzNjky"><div id="l6">
+            <te>youku</te>
+        </div></a>-->
+        <a title="#b" href="javascript:void(0)" onclick="jump()"><div id="lb">
+            <te><span id="lbt">返回主站</span></te>
+        </div></a>
+    </div>
+</body>
+<script>
+    function englist() {
+        var url = window.location.href;
+        if (url.indexOf("fromen") != -1) {
+            var l2 = document.getElementById("l2t");
+            var l4 = document.getElementById("l4t");
+            var lb = document.getElementById("lbt");
+            l2.innerText = "Bilibili subchannel";
+            l4.innerText = "Join WZQ02's Discord Server";
+            lb.innerText = "Go back to the main page";
+            document.title = 'Other external links';
+        }
+    }
+    function jump() {
+        var url = window.location.href;
+        if (url.indexOf("fromen") != -1) {
+            window.location.href = "http://wzq02.tk/new_eng.html?flag=1";
+        }
+        else {
+            window.location.href = "http://wzq02.tk/new_zhcn.html?flag=1";
+        }
+    }
+</script>
+</html>

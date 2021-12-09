@@ -1,0 +1,255 @@
+body { 
+    background: #ffffff; 
+    font-family: "Nexa","Century Gothic","Microsoft YaHei",微软雅黑,"Microsoft JhengHei","Segoe UI";
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: 0.25s;
+}
+.board {
+    margin: 360px 50% 0;
+    animation: gra 0.4s cubic-bezier(0, 0.67, 0, 1) 1;
+}
+.outlinks {
+    position: absolute; 
+    margin: auto 50% 0; 
+    top: 864px; 
+    left: 0px;
+    animation: gra 0.4s ease-out 1;
+}
+a {
+    text-decoration: none;
+}
+te {
+    color: #ffffff;
+    font-size: 22px;
+    position: relative;
+    top: 12px;
+    left: 12px;
+    font-weight: bold;
+    cursor: default;
+}
+te2 {
+    font-size: 14px;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    animation: gra 0.6s ease-out 1;
+    cursor: default;
+}
+te3 {
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    animation: gra 0.6s ease-out 1;
+    cursor: default;
+}
+.board a div:not(#help1) {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    box-shadow: 0px 0px 10px #999999;
+    border:2px solid #787878;
+    border-radius: 4px;
+    animation: sectzoom 0.4s cubic-bezier(0, 0.67, 0, 1) 1;
+    transition: all .3s;
+}
+#section1 {
+    background-color: #8789b0;
+    background-image: linear-gradient(#a7a9e0, #8789b0);
+    top: -210px;
+    left: -220px;
+}
+#section2 {
+    background-color: #e990e0;
+    background-image: linear-gradient(#f9a0f0, #e990e0);
+    top: -190px;
+    left: -220px;
+}
+#section3 {
+    background-color: #a0d4ef;
+    background-image: linear-gradient(#a0d4ef, #80a6e0);
+    top: -458px;
+    left: 0px;
+}
+#section4 {
+    background-color: #777990;
+    background-image: linear-gradient(#555970, #777990);
+    top: -438px;
+    left: 0px;
+}
+.outlinks a div {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    transition: all .3s;
+    border-radius: 4px;
+}
+#link1 {
+    background-color: #0086cf;
+    top: -300px;
+    left: -220px;
+}
+#link2 {
+    background-color: #e68bd0;
+    top: -348px;
+    left: -160px;
+}
+#link3 {
+    background-color: #fc030b;
+    top: -396px;
+    left: -100px;
+}
+#link4 {
+    background-color: #888888;
+    top: -444px;
+    left: -40px;
+} 
+#link5 {
+    background-color: #888888;
+    top: -492px;
+    left: 20px;
+}
+#link6 {
+    background-color: #646488;
+    top: -540px;
+    left: 80px;
+}
+#help1 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    top: -617px;
+    left: 170px;
+}
+#help1:hover {
+    animation: spin 1s ease 1;
+}
+#prompt {
+    display: none;
+    background-color: rgba(245,245,245,.8);
+    backdrop-filter: blur(48px); 
+    position: relative;
+    width: 360px;
+    height: 120px;
+    top: -590px;
+    left: 0px;
+    box-shadow: 0px 0px 20px #222222;
+    border-radius: 10px;
+    animation: fall 0.3s cubic-bezier(0, 0.67, 0, 1) 1;
+}
+img {
+    border-radius: 4px;
+}
+.board a div:not(#section4):not(#help1):hover {
+    filter: brightness(125%); 
+}
+.board a div:not(#section4):not(#help1):active {
+    filter: brightness(75%); 
+}
+.outlinks a div:hover {
+    filter: brightness(125%); 
+}
+.outlinks a div:active {
+    filter: brightness(60%); 
+}
+@media (prefers-color-scheme: dark) {
+    body { 
+        background: #252525; 
+    }
+    te2 {
+        color: white;
+    }
+    te3 {
+        color: #989898;
+    }
+    #prompt {
+        background-color: rgba(16,16,16,.5);
+    }
+    a {
+        color: #8080ff;
+    }
+}
+@keyframes sectzoom {
+    0% {
+        transform: scale(0.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes gra {
+    0% {
+        opacity: 0.0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
+@keyframes getbright {
+    from {
+        filter: brightness(100%); 
+    }
+    to {
+        filter: brightness(125%); 
+    }
+}
+@keyframes fall {
+    from {
+        height: 20px;
+        opacity: 0.0;
+    }
+    to {
+        height: 120px;
+        opacity: 1.0;
+    }
+}
+@keyframes llaf {
+    from {
+        height: 120px;
+        opacity: 1.0;
+    }
+    to {
+        height: 20px;
+        opacity: 0.0;
+    }
+}
+@keyframes disappear {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.0;
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes boardfall {
+    from {
+        opacity: 0.0;
+        margin: 60px 50% 0;
+    }
+    to {
+        opacity: 1.0;
+        margin: 360px 50% 0;
+    }
+}
+@keyframes linksfall {
+    from {
+        opacity: 0.0;
+        top: 564px; 
+    }
+    to {
+        opacity: 1.0;
+        top: 864px; 
+    }
+}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=580px">
+    <meta http-equiv="refresh" content="5;URL=new_zhcn.html">
+    <title>wzq02.tk</title>
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="shortcut icon" type="image/png" href="images/icon.png" />
+    <style>
+        body {
+            font-family: "Century Gothic","Microsoft YaHei",微软雅黑,"Microsoft JhengHei","Segoe UI";
+            overflow: scroll;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            transition: 0.25s;
+        }
+        #title {
+            text-align: center;
+            font-weight: bold;
+            width: 50%;
+            margin: 240px auto;
+            position: relative;
+            left: 0px;
+            font-size: 64px;
+            animation: drop 0.4s cubic-bezier(0, 0.67, 0, 1) 1;
+            color: #787878;
+        }
+        #largetitle {
+            text-align: center;
+            font-weight: bold;
+            width: 50%;
+            margin: -200px auto;
+            position: relative;
+            left: -480px;
+            top: 480px;
+            font-size: 384px;
+            animation: appear 0.6s ease 1;
+            color: #DFDFDF;
+        }
+        @media (prefers-color-scheme: dark) {
+            body { 
+                background: #252525; 
+            }
+            #title {
+                color: #EFEFEF;
+            }
+            #largetitle {
+                color: #414141;
+            }
+        }
+        @media (prefers-color-scheme: light) {
+            body { 
+                background: white; 
+            }
+        }
+        @keyframes appear {
+            0% {
+                opacity: 0.0;
+            }
+            100% {
+                opacity: 1.0;
+            }
+        }
+        @keyframes drop {
+            0% {
+                top: -300px;
+                opacity: 0.0;
+            }
+            100% {
+                top: 0px;
+                opacity: 1.0;
+            }
+        }
+        @keyframes disappear {
+            0% {
+                opacity: 1.0;
+            }
+            100% {
+                opacity: 0.0;
+            }
+        }
+    </style>
+</head>
+<body onload="jump1();">
+    <div class="wel">
+        <div id="largetitle">/wzq02.tk/</div>
+        <div id="title">/wzq02.tk/</div>
+    </div>
+<script>
+    function cleartitle() {
+        var tit = document.getElementById("title");
+        var ltit = document.getElementById("largetitle");
+        tit.style.opacity = "0.0";
+        tit.style.animation = "disappear 0.25s ease 1";
+        ltit.style.opacity = "0.0";
+        ltit.style.animation = "disappear 0.25s ease 1";
+    }
+    function jump1() {
+        var lang = navigator.language;
+        setTimeout("cleartitle()","1400");
+        if (lang == "zh-CN") {
+            setTimeout("jump2()","1400");
+        }
+        else {
+            setTimeout("jump3()","1400");
+        }
+    }
+    function jump2() {
+        window.location.href = "/new_zhcn.html";
+    }
+    function jump3() {
+        window.location.href = "/new_eng.html";
+    }
+</script>
+</body>
+</html>

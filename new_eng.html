@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=580px">
+    <title>WZQ02's site</title>
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="shortcut icon" type="image/png" href="images/icon.png" />
+    <link rel="stylesheet" href="./style.css" id="current_skin">
+</head>
+<body onload="init();">
+    <div class="topbar">
+        <span id="v1"></span>
+        <te3>
+            <a href="javascript:void(0)" onclick="changetheme()"><span id="chgskin">High Contrast Skin</span></a>&nbsp;&emsp;&nbsp;2021 WZQ02
+        </te3>
+    </div>
+    <div class="board">
+        <a title="WZQ's file server" href="http://wzq02.tk:1145/"><div id="section1">
+            <te>File Server</te>
+        </div></a>
+        <a title="some demo pages and stuff" href="http://wzq02.tk:893/index.html?fromen=1"><div id="section2">
+            <te>Demo Pages</te>
+        </div></a>
+        <a title="Personal livestream player" href="/player/watchlive"><div id="section3">
+            <te>WZQ02.TV</te>
+        </div></a>
+        <a><div id="section4">
+            <te>Nothing more, <br>what do you <br>expect?</te>
+        </div></a>
+        <a href="javascript:void(0)" onclick="help1()"><div id="help1"><img src="images/question_mark.png" height="24" width="24"/></div></a>
+        <div id="prompt">
+            <te2>Personal Livestream Player<br>I might do live streaming here. If you want to <br>perform live streaming on this server yourself, <br>please contact me.</te2>
+        </div>
+    </div>
+    <div class="outlinks">
+        <a title="Blog (Hexo-based, Chinese)" href="https://wzq02.github.io/"><div id="link1"><img src="images/link/link_hexo.png" height="48" width="48"/></div></a>
+        <a title="Bilibili" href="https://space.bilibili.com/12367945/"><div id="link2"><img src="images/link/bili_main.png" height="48" width="48"/></div></a>
+        <a title="YouTube channel" href="https://www.youtube.com/channel/UC8mPjdjl363hvt1ou7PDx3g/"><div id="link3"><img src="images/link/ytb_main.png" height="48" width="48"/></div></a>
+        <a title="Back to the old home page (Chinese)" href="old.html"><div id="link4"><img src="images/link/link_back.png" height="48" width="48"/></div></a>
+        <a title="简体中文" href="./new_zhcn.html"><div id="link5"><img src="images/link/link_zhcn.png" height="48" width="48"/></div></a>
+        <a title="Other external links" href="otherlinks.html?fromen=1"><div id="link6"><img src="images/link/link_others.png" height="48" width="48"/></div></a>
+    </div>
+<script>
+    function init() {
+        var url = window.location.href;
+        autochangetheme();
+        if (url.indexOf("flag") != -1) {
+            changeanimation();
+        }
+        v1();
+    }
+    function clearprompt() {
+        var prompt = document.getElementById("prompt");
+        prompt.style.animation = "";
+        prompt.style.display = "none";
+    }
+    function help1() {
+        var prompt = document.getElementById("prompt");
+        if (prompt.style.display == "block") {
+            prompt.style.animation = "llaf 0.31s ease 1";
+            setTimeout("clearprompt()","300");
+        }
+        else {
+            prompt.style.display = "block";
+        }
+    }
+    function changeanimation() {
+        var board = document.getElementsByClassName("board")[0];
+        var outlinks = document.getElementsByClassName("outlinks")[0];
+        var s1 = document.getElementById("section1");
+        var s2 = document.getElementById("section2");
+        var s3 = document.getElementById("section3");
+        var s4 = document.getElementById("section4");
+        board.style.animation = "boardfall 0.5s cubic-bezier(0, 0.67, 0, 1) 1"
+        outlinks.style.animation = "linksfall 0.5s cubic-bezier(0, 0.67, 0, 1) 1"
+        s1.style.animation = "none"
+        s2.style.animation = "none"
+        s3.style.animation = "none"
+        s4.style.animation = "none"
+    }
+    function changetheme() {
+        var n = getCookie('userskin');
+        var chgskin = document.getElementById("chgskin");
+        var skin = document.getElementById("current_skin");
+        if (n == "1") {
+            setCookie('userskin',"",365)
+            chgskin.innerText = "High Contrast Skin";
+            skin.href = "./style.css";
+        }
+        else {
+            setCookie('userskin',1,365);
+            autochangetheme();
+        }
+    }
+    function autochangetheme() {
+        var n = getCookie('userskin');
+        var chgskin = document.getElementById("chgskin");
+        var skin = document.getElementById("current_skin");
+        if (n == "1") {
+            chgskin.innerText = "Default Skin";
+            skin.href = "./style_hicon.css";
+        }
+    }
+    function setCookie(cname,cvalue,exdays) {
+        var d = new Date();
+        d.setTime(d.getTime()+(exdays*24*60*60*1000));
+        var expires = "expires="+d.toGMTString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i=0; i<ca.length; i++) {
+            var c = ca[i].trim();
+            if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        }
+        return "";
+    }
+    function v1() {
+        var o = getCookie('tpnfuspvcmfnblfs');
+        if (o == "") {
+            setCookie('tpnfuspvcmfnblfs',"",365)
+        }
+        if (o != "") {
+            var random1 = Math.ceil(Math.random()*4);
+            var v1 = document.getElementById("v1");
+            v1.style = "font-size: 14px; position: absolute; top: 16px; left: 16px; cursor: default; color: #888; animation: gra 1s ease-out 1;";
+            if (random1 == 1) {
+                v1.innerText = "wzq02.tk starts from May 5th, 2021."
+            }
+            if (random1 == 2) {
+                v1.innerText = "This site is hosted on a server with only 10GB of storage."
+            }
+            if (random1 == 3) {
+                v1.innerText = "You are not taking what's said here for real, right?"
+            }
+            if (random1 == 4) {
+                v1.innerText = "Never trust anyone who deal with otomads."
+            }
+            if (o == "jtxar13") {
+                v1.innerText = "You had just made things go bloody..."
+                document.getElementById("current_skin").href = "./bloody.css";
+                document.body.style = "color: black; background-color: #700;";
+            }
+        }
+    }
+</script>
+</body>
+</html>
