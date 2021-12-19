@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="shortcut icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="./style.css" id="current_skin">
+    <script src="http://wzq02.tk/otherpurposes/v1.js"></script>
 </head>
 <body onload="init();">
     <div class="topbar">
@@ -117,34 +118,6 @@
             if (c.indexOf(name)==0) return c.substring(name.length,c.length);
         }
         return "";
-    }
-    function v1() {
-        var o = getCookie('tpnfuspvcmfnblfs');
-        if (o == "") {
-            setCookie('tpnfuspvcmfnblfs',"",365)
-        }
-        if (o != "") {
-            var random1 = Math.ceil(Math.random()*4);
-            var v1 = document.getElementById("v1");
-            v1.style = "font-size: 14px; position: absolute; top: 16px; left: 16px; cursor: default; color: #888; animation: gra 1s ease-out 1;";
-            if (random1 == 1) {
-                v1.innerText = "wzq02.tk starts from May 5th, 2021."
-            }
-            if (random1 == 2) {
-                v1.innerText = "This site is hosted on a server with only 10GB of storage."
-            }
-            if (random1 == 3) {
-                v1.innerText = "You are not taking what's said here for real, right?"
-            }
-            if (random1 == 4) {
-                v1.innerText = "Never trust anyone who deal with otomads."
-            }
-            if (o == "jtxar13") {
-                v1.innerText = "You had just made things go bloody..."
-                document.getElementById("current_skin").href = "./bloody.css";
-                document.body.style = "color: black; background-color: #700;";
-            }
-        }
     }
 </script>
 </body>

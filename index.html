@@ -13,6 +13,8 @@
             overflow: scroll;
             overflow-x: hidden;
             overflow-y: hidden;
+            user-select: none;
+            -webkit-user-select: none;
             transition: 0.25s;
         }
         #title {
@@ -99,11 +101,16 @@
     function jump1() {
         var lang = navigator.language;
         setTimeout("cleartitle()","1400");
-        if (lang == "zh-CN") {
-            setTimeout("jump2()","1400");
+        if (detectIEVer() <= 8.0) {
+            setTimeout("jumpold()","1400");
         }
         else {
-            setTimeout("jump3()","1400");
+            if (lang == "zh-CN") {
+                setTimeout("jump2()","1400");
+            }
+            else {
+                setTimeout("jump3()","1400");
+            }
         }
     }
     function jump2() {
@@ -111,6 +118,18 @@
     }
     function jump3() {
         window.location.href = "/new_eng.html";
+    }
+    function jumpold() {
+        alert('你这用的什么远古浏览器...（将跳转到旧版页面）');
+        window.location.href = "/old.html";
+    }
+    function detectIEVer() {
+        var ua = navigator.userAgent;
+        var v = ua.indexOf("MSIE");
+        if (v < 0) {
+            return 9999;
+        }
+        return parseFloat (ua.substring (v + 5,ua.indexOf (";", v)));
     }
 </script>
 </body>
