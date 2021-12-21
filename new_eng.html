@@ -17,7 +17,7 @@
         </te3>
     </div>
     <div class="board">
-        <a title="WZQ's file server" href="http://wzq02.tk:1145/"><div id="section1">
+        <a title="WZQ's file server" href="javascript:void(0)" onclick="help2()"><div id="section1">
             <te>File Server</te>
         </div></a>
         <a title="some demo pages and stuff" href="http://wzq02.tk:893/index.html?fromen=1"><div id="section2">
@@ -32,6 +32,9 @@
         <a href="javascript:void(0)" onclick="help1()"><div id="help1"><img src="images/question_mark.png" height="24" width="24"/></div></a>
         <div id="prompt">
             <te2>Personal Livestream Player<br>I might do live streaming here. If you want to <br>perform live streaming on this server yourself, <br>please contact me.</te2>
+        </div>
+        <div id="prompt2">
+            <te2l>There are two file servers available:<br><br><a href="http://wzq02.tk:1145/">→Main (#1)</a><br></te2l><te2>*Hosted on the same server this site uses.</te2><te2l><br><a href="http://wzq02.tk:1919/">→Alternate (#2)</a><br></te2l><te2>*Hosted on my old PC, unstable and slower.<br><br>Note: These servers have different files on them.</te2>
         </div>
     </div>
     <div class="outlinks">
@@ -57,6 +60,11 @@
         prompt.style.animation = "";
         prompt.style.display = "none";
     }
+    function clearprompt2() {
+        var prompt2 = document.getElementById("prompt2");
+        prompt2.style.animation = "";
+        prompt2.style.display = "none";
+    }
     function help1() {
         var prompt = document.getElementById("prompt");
         if (prompt.style.display == "block") {
@@ -65,6 +73,21 @@
         }
         else {
             prompt.style.display = "block";
+        }
+    }
+    function help2() {
+        var prompt = document.getElementById("prompt");
+        var prompt2 = document.getElementById("prompt2");
+        if (prompt2.style.display == "block") {
+            prompt2.style.animation = "llaf2 0.31s ease 1";
+            setTimeout("clearprompt2()","300");
+        }
+        else {
+            if (prompt.style.display == "block") {
+                prompt.style.animation = "llaf 0.31s ease 1";
+                setTimeout("clearprompt()","300");
+            }
+            prompt2.style.display = "block";
         }
     }
     function changeanimation() {

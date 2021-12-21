@@ -47,6 +47,15 @@ te3 {
     animation: gra 0.6s ease-out 1;
     cursor: default;
 }
+te2l {
+    font-size: 18px;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    animation: gra 0.6s ease-out 1;
+    font-weight: bold;
+    cursor: default;
+}
 teundl {
     color: #ffffff;
     font-weight: bold;
@@ -157,6 +166,19 @@ teundl {
     border-radius: 10px;
     animation: fall 0.3s cubic-bezier(0, 0.67, 0, 1) 1;
 }
+#prompt2 {
+    display: none;
+    background-color: rgba(245,245,245,.8);
+    backdrop-filter: blur(48px); 
+    position: absolute;
+    width: 460px;
+    height: 220px;
+    top: 240px;
+    margin: auto -240px;
+    box-shadow: 0px 0px 20px #222222;
+    border-radius: 10px;
+    animation: fall2 0.3s cubic-bezier(0, 0.67, 0, 1) 1;
+}
 img {
     border-radius: 4px;
 }
@@ -182,7 +204,13 @@ img {
     te3 {
         color: #989898;
     }
+    te2l {
+        color: white;
+    }
     #prompt {
+        background-color: rgba(16,16,16,.5);
+    }
+    #prompt2 {
         background-color: rgba(16,16,16,.5);
     }
     a {
@@ -223,9 +251,29 @@ img {
         opacity: 1.0;
     }
 }
+@keyframes fall2 {
+    from {
+        height: 20px;
+        opacity: 0.0;
+    }
+    to {
+        height: 220px;
+        opacity: 1.0;
+    }
+}
 @keyframes llaf {
     from {
         height: 120px;
+        opacity: 1.0;
+    }
+    to {
+        height: 20px;
+        opacity: 0.0;
+    }
+}
+@keyframes llaf2 {
+    from {
+        height: 220px;
         opacity: 1.0;
     }
     to {

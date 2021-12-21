@@ -15,7 +15,7 @@
         </te3>
     </div>
     <div class="board">
-        <a title="私人网盘（容量不到10G" href="http://wzq02.tk:1145/"><div id="section1">
+        <a href="javascript:void(0)" onclick="help2()"><div id="section1">
             <te>文件服务器</te>
         </div></a>
         <a title="一些我瞎写的页面，以及不是我写的页面" href="http://wzq02.tk:893/"><div id="section2">
@@ -30,6 +30,9 @@
         <a href="javascript:void(0)" onclick="help1()"><div id="help1"><img src="images/question_mark.png" height="24" width="24"/></div></a>
         <div id="prompt">
             <te2>私人直播间<br><br>我可能会在这里直播一些无法在 B 站播出的内容。<br>如果你打算租用本直播间，请私信我。</te2>
+        </div>
+        <div id="prompt2">
+            <te2l>本站配置了两个文件服务器，请选择：<br><br><a href="http://wzq02.tk:1145/">→主文件服务器 (#1)</a><br></te2l><te2>*搭建于本站所在服务器，速度较快。</te2><te2l><br><a href="http://wzq02.tk:1919/">→副文件服务器 (#2)</a><br></te2l><te2>*搭建于我自己的一台备用电脑，走 frp 反向代理，速度较慢。<br><br>请注意，这两个文件服务器存放的文件不同。</te2>
         </div>
     </div>
     <div class="outlinks">
@@ -54,6 +57,11 @@
         prompt.style.animation = "";
         prompt.style.display = "none";
     }
+    function clearprompt2() {
+		var prompt2 = document.getElementById("prompt2");
+		prompt2.style.animation = "";
+        prompt2.style.display = "none";
+    }
     function help1() {
         var prompt = document.getElementById("prompt");
         if (prompt.style.display == "block") {
@@ -62,6 +70,21 @@
         }
         else {
             prompt.style.display = "block";
+        }
+    }
+    function help2() {
+    	var prompt = document.getElementById("prompt");
+        var prompt2 = document.getElementById("prompt2");
+        if (prompt2.style.display == "block") {
+            prompt2.style.animation = "llaf2 0.31s ease 1";
+            setTimeout("clearprompt2()","300");
+        }
+        else {
+        	if (prompt.style.display == "block") {
+        		prompt.style.animation = "llaf 0.31s ease 1";
+            	setTimeout("clearprompt()","300");
+        	}
+            prompt2.style.display = "block";
         }
     }
     function changeanimation() {
