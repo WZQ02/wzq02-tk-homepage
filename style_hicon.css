@@ -149,7 +149,7 @@ teundl {
     width: 360px;
     height: 120px;
     top: -590px;
-    left: 0px;
+    left: -80px;
     border:2px solid #a4a4a4;
     border-radius: 10px;
     animation: fall 0.3s cubic-bezier(0, 0.67, 0, 1) 1;
@@ -303,7 +303,7 @@ img {
 @keyframes boardfall {
     from {
         opacity: 0.0;
-        margin: 60px 50% 0;
+        margin: 760px 50% 0;
     }
     to {
         opacity: 1.0;
@@ -313,7 +313,7 @@ img {
 @keyframes linksfall {
     from {
         opacity: 0.0;
-        top: 564px; 
+        top: 1064px; 
     }
     to {
         opacity: 1.0;

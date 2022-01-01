@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="shortcut icon" type="image/png" href="images/icon.png" />
     <link rel="stylesheet" href="./style_linklist.css">
+    <script src="otherpurposes/lnkchgtheme.js"></script>
 </head>
 <body onload="englist();">
     <div class="list">
@@ -25,11 +26,11 @@
         <a title="#5" href="https://www.twitch.tv/wzq02/"><div id="l5">
             <te><span id="l5t">Twitch</span></te>
         </div></a>
-        <!--<a title="#6" href="https://www.youku.com/profile/index/?spm=114514&uid=UNTEzMjIzNjky"><div id="l6">
-            <te>youku</te>
-        </div></a>-->
+        <a title="#6" href="https://www.tapechat.net/uu/H32CDL/NLP4MZ1X"><div id="l6">
+            <te><span id="l5t">提问箱 (Tape)</span></te>
+        </div></a>
         <a title="#b" href="javascript:void(0)" onclick="jump()"><div id="lb">
-            <te><span id="lbt">返回主站</span></te>
+            <te><span id="l6t">返回主站</span></te>
         </div></a>
     </div>
 </body>
@@ -39,9 +40,11 @@
         if (url.indexOf("fromen") != -1) {
             var l2 = document.getElementById("l2t");
             var l4 = document.getElementById("l4t");
+            var l6 = document.getElementById("l6t");
             var lb = document.getElementById("lbt");
             l2.innerText = "Bilibili subchannel";
             l4.innerText = "Join WZQ02's Discord Server";
+            l6.innerText = "Question Box (Tapechat)";
             lb.innerText = "Go back to the main page";
             document.title = 'Other external links';
         }
