@@ -77,6 +77,10 @@ teundl {
     animation: sectzoom 0.4s cubic-bezier(0, 0.67, 0, 1) 1;
     transition: all .3s;
 }
+.board a div te{
+    float: left;
+    position: absolute;
+}
 #section1 {
     top: -210px;
     left: -220px;

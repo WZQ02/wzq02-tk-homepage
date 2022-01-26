@@ -6,56 +6,54 @@
     <title>其他外部链接</title>
     <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="shortcut icon" type="image/png" href="images/icon.png" />
-    <link rel="stylesheet" href="./style_linklist.css">
+    <link rel="stylesheet" href="style_linklist.css">
     <script src="otherpurposes/lnkchgtheme.js"></script>
+    <script src="otherpurposes/link_init.js"></script>
 </head>
-<body onload="englist();">
+<body>
     <div class="list">
-        <a title="#1" href="https://www.acfun.cn/u/4352250"><div id="l1">
+        <a title="#1" href="https://www.acfun.cn/u/4352250"><div class="li">
             <te><span id="l1t">Acfun</span></te>
         </div></a>
-        <a title="#2" href="https://space.bilibili.com/568299236/"><div id="l2">
+        <a title="#2" href="https://space.bilibili.com/568299236/"><div class="li">
             <te><span id="l2t">B 站子频道 (小号)</span></te>
         </div></a>
-        <a title="#3" href="https://twitter.com/02Wzq/"><div id="l3">
+        <a title="#3" href="https://twitter.com/02Wzq/"><div class="li">
             <te><span id="l3t">Twitter</span></te>
         </div></a>
-        <a title="#4" href="https://discord.gg/Bpv4qaw"><div id="l4">
-            <te><span id="l4t">加入 WZQ02 的 Discord 群</span></te>
+        <a title="#4" href="https://www.tapechat.net/uu/H32CDL/NLP4MZ1X"><div class="li">
+            <te><span id="l4t">提问箱 (Tape)</span></te>
         </div></a>
-        <a title="#5" href="https://www.twitch.tv/wzq02/"><div id="l5">
+        <a title="#5" href="https://www.twitch.tv/wzq02/"><div class="li">
             <te><span id="l5t">Twitch</span></te>
         </div></a>
-        <a title="#6" href="https://www.tapechat.net/uu/H32CDL/NLP4MZ1X"><div id="l6">
-            <te><span id="l5t">提问箱 (Tape)</span></te>
+        <a title="#6" href="https://discord.gg/Bpv4qaw"><div class="li">
+            <te><span id="l6t">个人群 (Discord)</span></te>
         </div></a>
-        <a title="#b" href="javascript:void(0)" onclick="jump()"><div id="lb">
-            <te><span id="l6t">返回主站</span></te>
+        <a title="#7" href="https://jq.qq.com/?_wv=1027&k=JNxRzKEU"><div class="li">
+            <te><span id="l7t">个人群 (QQ)</span></te>
+        </div></a>
+        <a title="#b" href="javascript:void(0)" onclick="jump()"><div class="li">
+            <te><span id="lbt">返回主站</span></te>
         </div></a>
     </div>
 </body>
 <script>
+    englist();
     function englist() {
         var url = window.location.href;
         if (url.indexOf("fromen") != -1) {
-            var l2 = document.getElementById("l2t");
-            var l4 = document.getElementById("l4t");
-            var l6 = document.getElementById("l6t");
-            var lb = document.getElementById("lbt");
-            l2.innerText = "Bilibili subchannel";
-            l4.innerText = "Join WZQ02's Discord Server";
-            l6.innerText = "Question Box (Tapechat)";
-            lb.innerText = "Go back to the main page";
+            var l2t = document.getElementById("l2t");
+            var l4t = document.getElementById("l4t");
+            var l6t = document.getElementById("l6t");
+            var l7t = document.getElementById("l7t");
+            var lbt = document.getElementById("lbt");
+            l2t.innerText = "Bilibili subchannel";
+            l4t.innerText = "Question Box (Tapechat)";
+            l6t.innerText = "Join WZQ02's Discord Server";
+            l7t.innerText = "Join WZQ02's QQ group";
+            lbt.innerText = "Go back to the main page";
             document.title = 'Other external links';
-        }
-    }
-    function jump() {
-        var url = window.location.href;
-        if (url.indexOf("fromen") != -1) {
-            window.location.href = "http://wzq02.tk/new_eng.html?flag=1";
-        }
-        else {
-            window.location.href = "http://wzq02.tk/new_zhcn.html?flag=1";
         }
     }
 </script>

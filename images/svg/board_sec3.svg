@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 120" style="enable-background:new 0 0 200 120;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.5;}
+	.st1{fill:#FFFFFF;}
+	.st2{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
+</style>
+<g>
+	<g class="st0">
+		<path class="st1" d="M10,104c0,3.3,2.7,6,6,6h34c3.3,0,6-2.7,6-6v-9H10V104z"/>
+	</g>
+	<g class="st0">
+		<path class="st1" d="M50,50H16c-3.3,0-6,2.7-6,6v9h46v-9C56,52.7,53.3,50,50,50z"/>
+	</g>
+	<g class="st0">
+		<path class="st1" d="M80,50H67c-3.3,0-6,2.7-6,6v48c0,3.3,2.7,6,6,6h13c3.3,0,6-2.7,6-6V56C86,52.7,83.3,50,80,50z"/>
+	</g>
+	<rect x="10" y="65" class="st2" width="46" height="30"/>
+</g>
+</svg>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=580px">
+    <meta name="viewport" content="width=580px,user-scalable=no">
     <meta http-equiv="refresh" content="5;URL=new_zhcn.html">
     <title>wzq02.tk</title>
     <link rel="icon" type="image/png" href="images/icon.png" />
@@ -17,9 +17,12 @@
             -webkit-user-select: none;
             transition: 0.25s;
         }
-        #title {
+        .wel {
             text-align: center;
             font-weight: bold;
+
+        }
+        #title {
             width: 50%;
             margin: 240px auto;
             position: relative;
@@ -29,8 +32,6 @@
             color: #787878;
         }
         #largetitle {
-            text-align: center;
-            font-weight: bold;
             width: 50%;
             margin: -200px auto;
             position: relative;
@@ -39,6 +40,13 @@
             font-size: 384px;
             animation: appear 0.6s ease 1;
             color: #DFDFDF;
+        }
+        #tips {
+            top: -620px;
+            position: relative;
+            font-size: 18px;
+            animation: appear 0.7s ease 1;
+            color: #787878;
         }
         @media (prefers-color-scheme: dark) {
             body { 
@@ -74,32 +82,36 @@
                 opacity: 1.0;
             }
         }
-        @keyframes disappear {
-            0% {
-                opacity: 1.0;
-            }
-            100% {
-                opacity: 0.0;
-            }
-        }
     </style>
 </head>
-<body onload="jump1();">
+<body>
     <div class="wel">
         <div id="largetitle">/wzq02.tk/</div>
         <div id="title">/wzq02.tk/</div>
+        <span id="tips"></span>
     </div>
 <script>
+    var tit = document.getElementById("title");
+    var ltit = document.getElementById("largetitle");
+    var tips = document.getElementById("tips");
+    var lang = navigator.language;
+    showtips();
+    jump1();
+    function showtips() {
+        if (lang == "zh-CN") {
+            tips.innerText = "提示：如页面未正确显示，请清空你的浏览器缓存。";
+        }
+        else {
+            tips.innerText = "Tip: if pages are not displaying correctly, clear your browser cache.";
+        }
+    }
     function cleartitle() {
-        var tit = document.getElementById("title");
-        var ltit = document.getElementById("largetitle");
-        tit.style.opacity = "0.0";
-        tit.style.animation = "disappear 0.25s ease 1";
-        ltit.style.opacity = "0.0";
-        ltit.style.animation = "disappear 0.25s ease 1";
+        for (var i of [tit,ltit,tips]) {
+            i.style.transition = "0.25s";
+            i.style.opacity = "0.0";
+        }
     }
     function jump1() {
-        var lang = navigator.language;
         setTimeout("cleartitle()","1400");
         if (detectIEVer() <= 8.0) {
             setTimeout("jumpold()","1400");
@@ -120,7 +132,7 @@
         window.location.href = "/new_eng.html";
     }
     function jumpold() {
-        alert('你这用的什么远古浏览器...（将跳转到旧版页面）');
+        alert('WTF dude? 你这用的什么远古浏览器...\n（将跳转到旧版页面）');
         window.location.href = "/old.html";
     }
     function detectIEVer() {

@@ -57,7 +57,7 @@ te2l {
     cursor: default;
 }
 teundl {
-    color: #ffffff;
+    color: rgba(255,255,255,0.5);
     font-weight: bold;
     font-size: 16px;
     position: relative;
@@ -76,6 +76,10 @@ teundl {
     border-radius: 4px;
     animation: sectzoom 0.4s cubic-bezier(0, 0.67, 0, 1) 1;
     transition: all .3s;
+}
+.board a div te{
+    float: left;
+    position: absolute;
 }
 #section1 {
     background-color: #8789b0;
