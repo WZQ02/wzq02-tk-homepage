@@ -1,11 +1,9 @@
 setTimeout("listfall()","16");
 function listfall() {
     var lists = document.getElementsByClassName("li");
-    icount = 0;
-    for (var i of lists) {
-        i.style.opacity = "1.0";
-        i.style.top = icount*80+"px";
-        icount++;
+    for (var i=0; i < lists.length; i++) {//调整for循环代码，以防止IE下无法执行
+        lists[i].style.opacity = "1.0";
+        lists[i].style.top = i*80+"px";
     }
 }
 function jump() {
