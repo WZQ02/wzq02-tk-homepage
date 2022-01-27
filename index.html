@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=580px,user-scalable=no">
-    <meta http-equiv="refresh" content="5;URL=new_zhcn.html">
+    <meta http-equiv="refresh" content="5;URL=old.html">
     <title>wzq02.tk</title>
     <link rel="icon" type="image/png" href="images/icon.png" />
     <link rel="shortcut icon" type="image/png" href="images/icon.png" />
@@ -105,14 +105,8 @@
             tips.innerText = "Tip: if pages are not displaying correctly, clear your browser cache.";
         }
     }
-    function cleartitle() {
-        for (var i of [tit,ltit,tips]) {
-            i.style.transition = "0.25s";
-            i.style.opacity = "0.0";
-        }
-    }
     function jump1() {
-        setTimeout("cleartitle()","1400");
+    	setTimeout("cleartitle()","1400");
         if (detectIEVer() <= 8.0) {
             setTimeout("jumpold()","1400");
         }
@@ -142,6 +136,13 @@
             return 9999;
         }
         return parseFloat (ua.substring (v + 5,ua.indexOf (";", v)));
+    }
+    function cleartitle() {
+    	clear = [tit,ltit,tips];
+    	clear.forEach(function(i){//更换for循环的方式，以防止旧版IE下无法执行js
+    		i.style.transition = "0.25s";
+            i.style.opacity = "0.0";
+    	})
     }
 </script>
 </body>
