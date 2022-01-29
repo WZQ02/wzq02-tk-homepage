@@ -3,7 +3,6 @@ function autochangetheme() {
     var n = getCookie('userskin');
     var lists = document.getElementsByClassName("li");
     if (n == "1") {
-        icount = 0;
         for (var i=0; i < lists.length; i++) {//调整for循环代码，以防止IE下无法执行
             lists[i].style.boxShadow = "none";
             lists[i].style.border = "2px solid #676767";
