@@ -141,9 +141,12 @@
     </div>
     <div id="prompb"></div>
     <div id="prompt">
-        <te>下播了下播了<br>我现在还没有开播，你可以离开这里了。</te><br><ste><a href="/otherpurposes/chatroom1">→前往聊天室页面 </a><a href="http://wzq02.tk/new_zhcn.html?flag=1">返回主站←</a></ste>
+        <te>对面关播了<br>我现在还没有开播，你可以离开这里了。</te><br><ste><a href="/otherpurposes/chatroom1">→前往聊天室页面 </a><a href="http://wzq02.tk/new_zhcn.html?flag=1">返回主站←</a></ste>
     </div>
 <script>
+    if (window.location.href.indexOf("wzq02") != -1) {
+        window.location.href = "http://207.246.84.248/player/livewithchat/"; //直播页用https或者域名访问会出问题，此处添加自动跳转
+    }
     var xmlhttp;
     if (window.XMLHttpRequest) {
         xmlhttp = new XMLHttpRequest();

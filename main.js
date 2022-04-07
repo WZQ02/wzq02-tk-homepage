@@ -4,6 +4,9 @@ function init() {
     if (url.indexOf("flag") != -1) {
         changeanimation();
     }
+    else {
+        sectionseq();
+    }
     if (url.indexOf("eng") != -1) {
         v1();
     }
@@ -106,4 +109,18 @@ function getCookie(cname) {
         if (c.indexOf(name)==0) return c.substring(name.length,c.length);
     }
     return "";
+}
+function sectionseq() {
+    var hp1 = document.getElementById("help1");
+    var s2 = document.getElementById("section2");
+    var s3 = document.getElementById("section3");
+    var s4 = document.getElementById("section4");
+    hp1.style.display = "none";
+    s2.style.display = "none";
+    s3.style.display = "none";
+    s4.style.display = "none";
+    setTimeout(function(){s2.style.display = "";},"200");
+    setTimeout(function(){s3.style.display = "";},"400");
+    setTimeout(function(){hp1.style.display = "";},"600");
+    setTimeout(function(){s4.style.display = "";},"600");
 }

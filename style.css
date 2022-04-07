@@ -73,7 +73,7 @@ teundl {
     height: 120px;
     box-shadow: 0px 0px 10px #999999;
     border:2px solid #787878;
-    border-radius: 4px;
+    border-radius: 12px;
     animation: sectzoom 0.4s cubic-bezier(0, 0.67, 0, 1) 1;
     transition: all .3s;
 }
@@ -107,10 +107,11 @@ teundl {
 }
 .outlinks a div {
     position: relative;
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
     transition: all .3s;
-    border-radius: 4px;
+    border-radius: 8px;
+    padding: 3px 3px;
 }
 #link1 {
     background-color: #0086cf;
@@ -153,6 +154,7 @@ teundl {
     height: 24px;
     top: -617px;
     left: 170px;
+    animation: gra 0.4s ease-out 1;
 }
 #help1:hover {
     animation: spin 1s ease 1;
